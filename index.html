@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+</head>
+<body>
+    <header></head><h1>Javascript Exercises</h1></header>
+    <script src="scripts/index.js"></script>
+    <details open><summary><h2>Week 4</h2></summary>
+        <div class="exercise">
+            <h3>Positive Numbers</h3>
+            <div class="QandA">
+                <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing only the positive numbers in the given array.</p>
+                <div class="ans">
+                    <label for="id_nums1">Enter a space-separated list of ints:<br></label>
+                    <input type="text" name="nums1" id="id_nums1" class="nums"><br>
+                    <button onclick="posNums(document.getElementById('id_nums1').value);">Submit</button>
+                    <button class="reset" onclick="clearResult(['id_nums1'], 'id_result1', [])">Reset</button>
+                </div>
+                <div class="result" id="id_result1">Result: </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h3>Even Numbers</h3>
+            <div class="QandA">
+                <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing only the even numbers in the given array.</p>
+                <div class="ans">
+                        <label for="id_nums2">Enter a space-separated list of ints:<br></label>
+                        <input type="text" name="nums2" id="id_nums2" class="nums"><br>
+                        <button onclick="evenNums(document.getElementById('id_nums2').value);">Submit</button>
+                        <button class="reset" onclick="clearResult(['id_nums2'], 'id_result2', [])">Reset</button>
+                    </div>
+                    <div class="result" id="id_result2">Result: </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+                <h3>Square the Numbers</h3>
+                <div class="QandA">
+                    <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing result of squaring each of the numbers in the given array by two. </p>
+                    <div class="ans">
+                            <label for="id_nums3">Enter a space-separated list of ints:<br></label>
+                            <input type="text" name="nums3" id="id_nums3" class="nums"><br>
+                            <button onclick="squareNums(document.getElementById('id_nums3').value);">Submit</button>
+                            <button class="reset" onclick="clearResult(['id_nums3'], 'id_result3', [])">Reset</button>
+                        </div>
+                        <div class="result" id="id_result3">Result: </div>
+                </div>
+            </div>
+
+        <hr>
+        <hr>
+
+    </details>
+
+    <details><summary><h2>Python 103</h2></summary>
+        <div class="exercise">
+            <h3>Day of the Week</h3>
+            <div class="QandA">
+                <p class="ques">Prompt the user for a day number (0 - 6), then convert it to the day name.</p>
+                <div class="ans">
+                    <label for="id_dayNum">Enter day number (0 - 6): </label><input id="id_dayNum" type="number" name="dayNum" min="0" max="6">
+                    <!-- <input type="submit" value="Submit" onclick="dayOfWeek()"> -->
+                    <button onclick="dayOfWeek();">Submit</button>
+                    <!-- <input type="reset" value="Reset" onclick="clearResult(['id_dayNum'], 'id_result4', [])"> -->
+                    <button class="reset" onclick="clearResult(['id_dayNum'], 'id_result4', [])">Reset</button>
+                </div>
+                <div class="result" id="id_result4">Result: </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <h3>Work or Sleep In?</h3>
+            <div class="QandA">
+                <p class="ques">Prompt the user for a day of the week as a number, then print "Go to work" if it's a work day or "Sleep in" if it's a weekend day.</p>
+                <div class="ans">
+                        <label for="id_dayNum2">Enter day number (0 - 6): </label><input id="id_dayNum2" type="number" name="dayNum2" min="0" max="6">
+                        <button onclick="workOrSleep();">Submit</button>
+                        <!-- <input type="submit" value="Submit" onclick="workOrSleep()"> 
+                        <input type="reset" value="Reset" onclick="clearResult(['id_dayNum2'], 'id_result5', [])"> -->
+                        <button class="reset" onclick="clearResult(['id_dayNum2'], 'id_result5', [])">Reset</button>
+                    </div>
+                    <div class="result" id="id_result5">Result: </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <h3>Celsius to Fahrenheit</h3>
+            <div class="QandA">
+                <p class="ques">Prompt the user for a number in degrees Celsius, and convert the value to degrees in Fahrenheit and display it to the user.</p>
+                <div class="ans">
+                        <label for="id_tempCel">Enter a temperature in Celsius: </label><input type="number" min="-1000" max="1000" name="tempCel" id="id_tempCel"><br>
+                        <button onclick="celToF();">Submit</button>
+                        <!-- <input type="submit" value="Submit" onclick="celToF();">
+                        <input type="reset" value="Reset" onclick="clearResult(['id_tempCel'],'id_result6', [])"> -->
+                        <button class="reset" onclick="clearResult(['id_tempCel'], 'id_result6', [])">Reset</button>
+                    </div>
+                    <div class="result" id="id_result6">Result: </div>
+            </div>
+        </div>
+        <div class="exercise">
+                <h3>Tip Calculator</h3>
+                <div class="QandA">
+                    <p class="ques" style="text-align: left">Prompt the user for:</p>
+                    <ol style="text-align: left">
+                    <li>The total bill amount</li>
+                    <li>Number of people splitting the bill</li>
+                    <li>The level of service: good, fair, or bad</li>
+                    </ol>
+                    <p class="ques" style="text-align: left">Calculate the tip amount (20% for good, 15% for fair, 10% for bad service), the total amount (bill amount + tip amount), and the bill amount per person.</p>
+                    <!-- <ul style="text-align: left">
+                        <li>good -> 20%</li>
+                        <li>fair -> 15%</li>
+                        <li>bad -> 10%</li>
+                    </ul> -->
+                    <div class="ans">
+                            <label for="id_billAmt">Enter the bill amount: </label>$<input type="text" name="billAmt" id="id_billAmt"><br>
+                            <label for="id_billSplit">How many people? </label><input type="number" min="1" max="20" name="billSplit" id="id_billSplit"><br>
+                            <fieldset>
+                                <legend>How was the service?</legend>
+
+                                <input type="radio" name="svc" id="id_good" value="good" checked/>
+                                <label for="id_good">Good</label>
+                                <input type="radio" name="svc" id="id_fair" value="fair"/>
+                                <label for="id_fair">Fair</label>
+                                <input type="radio" name="svc" id="id_bad" value="bad"/>
+                                <label for="id_bad">Bad</label>
+                            </fieldset>
+
+                            <button onclick="tipCalc();">Submit</button>
+                            <!-- <input type="submit" value="Submit" onclick="tipCalc();">
+                            <input type="reset" value="Reset" onclick="clearResult(['id_billAmt1', 'id_svcLvl'],'id_result7')">
+                            <input type="reset" value="Reset" onclick="clearResult(['id_billAmt1'],'id_result7', ['id_good', 'id_fair', 'id_bad'])"> -->
+                            <button class="reset" onclick="clearResult(['id_billAmt', 'id_billSplit'],'id_result7', ['id_good', 'id_fair', 'id_bad'])">Reset</button>
+                    </div>
+                    <div class="result" id="id_result7">Result: </div>
+                </div>
+            </div>
+    <!-- </section> --></details>
+</body>

@@ -1,0 +1,72 @@
+body {font-family: 'Oxygen', sans-serif; padding-bottom: 20px}
+h1, h2 {text-align: center}
+
+.exercise {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 10px;
+    /* background-color: rgb(85, 148, 104); */
+    background-image: linear-gradient(to bottom right, rgb(156, 228, 177), rgb(85, 148, 104));
+    margin: 10px auto;
+    padding: 5px;
+    text-align: center
+}
+
+.exercise:hover {
+    border: solid 2px green;
+    box-shadow: 6px 4px 17px -1px rgba(0,0,0,0.75);
+}
+
+.exercise h3 {
+    margin: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.QandA {
+    /* padding: 0 10px; */
+    width: 80%;
+}
+
+.ans, .result {
+    background-color: blanchedalmond;
+    padding: 10px;
+    /* width: 100%; */
+    overflow: hidden;
+}
+.ansy {
+    display: flex;
+    justify-content: center;
+}
+.result {border-radius: 0 0 8px 8px}
+
+.res {
+    color: red;
+}
+
+input {margin-bottom: 5px; height: 20px}
+button {
+    /* margin-bottom: 5px; */
+    /* margin: 10px; */
+    height: 25px;
+    border-radius: 8px;
+    background-color: dodgerblue;
+    color: white;
+    border-style: outset;
+    font-size: 15px;
+
+
+}
+
+.reset {background-color: red}
+.nums {width: 250px;}
+
+@media screen and (min-width: 820px) {
+    .exercise {width: 800px; flex-direction: row; }
+    .exercise h3 {margin: 0 8px; width: 20%;}
+    .result {border-radius: 0 0 8px 0}
+}
