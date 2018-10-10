@@ -122,6 +122,21 @@
             </div>
         </div>
 
+        <div class="exercise"><h3>Str Multiply</h3>
+            <div class="QandA">
+                <p class="ques">Write a <i>strMultiply</i> function which takes two arguments:<br><br>
+                    &nbsp;&Tab;<i>str</i> - the string to multiply<br>
+                    &nbsp;&Tab;<i>times</i> - number of times to multiply</p>
+                <div class="ans">
+                    <label for="id_str">Enter <i>str</i>: </label><input type="text" name="str" id="id_str"><br>
+                    <label for="id_times">Enter <i>times</i> (1-20): </label><input type="number" min="1" max="20" name="times" id="id_times"><br>
+                    <button onclick="strMultiply(document.getElementById('id_str').value, Number(document.getElementById('id_times').value));">Submit</button>
+                    <button class="reset" onclick="clearResult(['id_str', 'id_times'], 'id_result9', [])">Reset</button>
+                </div>
+                <div class="result" id="id_result9">Result: </div>
+            </div>
+        </div>
+
 
     </details>
 

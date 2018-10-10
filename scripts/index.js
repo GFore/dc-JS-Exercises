@@ -133,6 +133,14 @@ function nTimes(n, phrase) {
     callNTimes(n, printPhrase);
 }
 
+function strMultiply(str, times) {
+    if (times>20) {times = 20;} // limit times to max of 20
+    let arr = Array(times);    // Create an array of length times
+    arr.fill(str);             // Fill each element of the array with string str
+
+    document.getElementById("id_result9").innerHTML += ` <span class="res">${arr.join('')}</span><br>`
+}
+
 function clearResult(inputName, resultName, radioButtonList) {
     inputName.forEach(element => {document.getElementById(element).value = "";});
     // radioButtonList.forEach(element => {document.getElementById(element).removeAttribute("checked")});
