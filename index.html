@@ -93,6 +93,35 @@
             </div>
         </div>
 
+        <div class="exercise"><h3>3 Times</h3>
+            <div class="QandA">
+                <p class="ques" style="text-align: left">Given this function:<br><br>
+                    <code>function call3Times(fun) {<br>
+                          &nbsp;&Tab;fun();<br>
+                          &nbsp;&Tab;fun();<br>
+                          &nbsp;&Tab;fun();<br>
+                        }</code><br><br>
+                Use the call3Times function to print "Hello, world!" 3 times.</p>
+                <div class="ans">
+                    <button onclick="threeTimes('Hello, world!\n');">Submit</button>
+                    <button class="reset" onclick="clearResult([], 'id_result7', [])">Reset</button>
+                </div>
+                <div class="result" id="id_result7">Result: </div>
+            </div>
+        </div>
+
+        <div class="exercise"><h3>n Times</h3>
+            <div class="QandA">
+                <p class="ques" style="text-align: left">Write a function callNTimes that takes two arguments: times as a number, and fun as a function. It will call that function for that many times</p>
+                <div class="ans">
+                    <label for="id_cnt">Enter repeat count (1-20): </label><input type="number" min="1" max="20" name="cnt" id="id_cnt"><br>
+                    <button onclick="nTimes(document.getElementById('id_cnt').value, 'Hello, world!\n');">Submit</button>
+                    <button class="reset" onclick="clearResult(['id_cnt'], 'id_result8', [])">Reset</button>
+                </div>
+                <div class="result" id="id_result8">Result: </div>
+            </div>
+        </div>
+
 
     </details>
 

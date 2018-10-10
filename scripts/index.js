@@ -108,6 +108,31 @@ function goodJob(nameList) {
 }
 
 
+function threeTimes(phrase) {
+    function call3Times(fun) {
+        fun();
+        fun();
+        fun();
+    }
+
+    function printPhrase() {
+        document.getElementById("id_result7").innerHTML += `<br><span class="res">${phrase}</span>`
+    }
+    call3Times(printPhrase);
+}
+
+function nTimes(n, phrase) {
+    function callNTimes(times, fun) {
+        if (times>20) {times = 20;}                 //limit to 20 repeats
+        for (let i = 0; i < times; i++) {fun();}
+    }
+
+    function printPhrase() {
+        document.getElementById("id_result8").innerHTML += `<br><span class="res">${phrase}</span>`
+    }
+    callNTimes(n, printPhrase);
+}
+
 function clearResult(inputName, resultName, radioButtonList) {
     inputName.forEach(element => {document.getElementById(element).value = "";});
     // radioButtonList.forEach(element => {document.getElementById(element).removeAttribute("checked")});
