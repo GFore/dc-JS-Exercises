@@ -26,7 +26,6 @@ function posNums(numList) {
     }
 }
 
-
 function evenNums(numList) {
     // Write a function which takes an array of numbers as input and returns**
     // a new array containing only the even numbers in the given array.
@@ -45,7 +44,6 @@ function evenNums(numList) {
         document.getElementById("id_result2").innerHTML += ` <span class="res">${newNumList.join(', ')}</span>`
     }
 }
-
 
 function squareNums(numList) {
     // Write a function which takes an array of numbers as input and returns a new 
@@ -107,7 +105,6 @@ function goodJob(nameList) {
     document.getElementById("id_result6").innerHTML += ` <span class="res">Good job, ${x}!</span><br>`)
 }
 
-
 function threeTimes(phrase) {
     function call3Times(fun) {
         fun();
@@ -134,11 +131,43 @@ function nTimes(n, phrase) {
 }
 
 function strMultiply(str, times) {
-    if (times>20) {times = 20;} // limit times to max of 20
-    let arr = Array(times);    // Create an array of length times
-    arr.fill(str);             // Fill each element of the array with string str
+    if (times>20) {times = 20;}            // limit times to max of 20
+
+    let arr = Array(times).fill(str);    // Create an array of length times and fill it with str
 
     document.getElementById("id_result9").innerHTML += ` <span class="res">${arr.join('')}</span><br>`
+}
+
+function sortArray1(nameList) {
+    let nameArray = nameList.split(", ").sort();    
+
+    document.getElementById("id_result10").innerHTML += ` <span class="res">${nameArray.join(", ")}</span><br>`;
+}
+
+function sortArray2(nameList) {
+    let nameArray = nameList.split(", ").sort();  //sort firt alphabetically so strings of same len will be alpha sorted
+    nameArray.sort(function(a, b) {
+        return a.length - b.length;
+    });
+
+    document.getElementById("id_result11").innerHTML += ` <span class="res">${nameArray.join(", ")}</span><br>`;
+}
+
+function sortArray3() {
+    let products = [
+        { name: 'Basketball', price: 12.00 },
+        { name: 'Tennis Racquet', price: 66.00 },
+        { name: 'Tennis Shorts', price: 59.00 },
+        { name: 'Tennis Balls', price: 9.00 }
+      ];
+
+    products.sort(function(a, b) {
+        return a.price - b.price;
+    });
+
+    products.forEach(function(x) {
+        document.getElementById("id_result12").innerHTML += `<br><span class="res">${x.name}: $${x.price}</span>`;
+    });
 }
 
 function clearResult(inputName, resultName, radioButtonList) {
@@ -156,24 +185,3 @@ function clearResult(inputName, resultName, radioButtonList) {
     document.getElementById(resultName).innerHTML = `Result: `;
 }
 
-
-
-function tipCalc() {
-    let totBillAmt = Number(document.getElementById("id_billAmt").value);
-    let tipAmt = 0;
-    let tipRate = 0.1;
-    let perPerson = 0;
-
-    if (document.querySelector('input[name = "svc"]:checked').value === "good") {
-        tipRate = 0.2;
-    } else if (document.querySelector('input[name = "svc"]:checked').value === "fair") {
-        tipRate = 0.15;
-    }
-    tipAmt = totBillAmt*tipRate
-    totBillAmt += tipAmt
-    perPerson = totBillAmt / Number(document.getElementById("id_billSplit").value)
-
-    document.getElementById("id_result7").innerHTML = `Result: <span class="res">Tip Amount: $${tipAmt.toFixed(2)}</span>`
-    document.getElementById("id_result7").innerHTML += ` <span class="res">Total Amount: $${totBillAmt.toFixed(2)}</span>`
-    document.getElementById("id_result7").innerHTML += ` <span class="res">Amount per person: $${perPerson.toFixed(2)}</span>`
-}

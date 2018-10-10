@@ -1,5 +1,6 @@
 body {font-family: 'Oxygen', sans-serif; padding-bottom: 20px}
 h1, h2 {text-align: center}
+code {margin-left: 20px;}
 
 .exercise {
     display: flex;

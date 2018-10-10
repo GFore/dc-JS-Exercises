@@ -96,11 +96,11 @@
         <div class="exercise"><h3>3 Times</h3>
             <div class="QandA">
                 <p class="ques" style="text-align: left">Given this function:<br><br>
-                    <code>function call3Times(fun) {<br>
-                          &nbsp;&Tab;fun();<br>
-                          &nbsp;&Tab;fun();<br>
-                          &nbsp;&Tab;fun();<br>
-                        }</code><br><br>
+                    <code>function call3Times(fun) {<br></code>
+                    <code>&nbsp;&Tab;fun();<br></code>
+                    <code>&nbsp;&Tab;fun();<br></code>
+                    <code>&nbsp;&Tab;fun();<br></code>
+                    <code>}</code><br><br>
                 Use the call3Times function to print "Hello, world!" 3 times.</p>
                 <div class="ans">
                     <button onclick="threeTimes('Hello, world!\n');">Submit</button>
@@ -137,67 +137,53 @@
             </div>
         </div>
 
+        <div class="exercise"><h3>Sort an Array 1</h3>
+            <div class="QandA">
+                <p class="ques">Given an array of strings, such as an array of names, sort them by alphabetically order.</p>
+                <div class="ans">
+                    <label for="id_str1">Replace the example data below with your list of strings:<br></label>
+                    <textarea id="id_str1" rows="4" cols="25">Dom, Lyn, Kirk, Autumn, Trista, Jesslyn, Kevin, John, Eli, Juan, Robert, Keyur, Jason, Che, Ben</textarea><br>
+
+                    <button onclick="sortArray1(document.getElementById('id_str1').value);">Submit</button>
+                    <button class="reset" onclick="clearResult(['id_str1'], 'id_result10', [])">Reset</button>
+                </div>
+                <div class="result" id="id_result10">Result: </div>
+            </div>
+        </div>
+
+        <div class="exercise"><h3>Sort an Array 2</h3>
+            <div class="QandA">
+                <p class="ques">Given an array of strings, sort them by how long each string is, shortest first.</p>
+                <div class="ans">
+                    <label for="id_str2">Replace the example data below with your list of strings:<br></label>
+                    <textarea id="id_str2" rows="4" cols="25">Dom, Lyn, Kirk, Autumn, Trista, Jesslyn, Kevin, John, Eli, Juan, Robert, Keyur, Jason, Che, Ben</textarea><br>
+
+                    <button onclick="sortArray2(document.getElementById('id_str2').value);">Submit</button>
+                    <button class="reset" onclick="clearResult(['id_str2'], 'id_result11', [])">Reset</button>
+                </div>
+                <div class="result" id="id_result11">Result: </div>
+            </div>
+        </div>
+
+        <div class="exercise"><h3>Sort an Array 3</h3>
+            <div class="QandA">
+                <p class="ques" style="text-align: left">Sort the following array of products by price:<br><br>
+                    <code>var products = [<br></code>
+                    <code>&nbsp;&Tab;{ name: 'Basketball', price: 12.00 },<br></code>
+                    <code>&nbsp;&Tab;{ name: 'Tennis Racquet', price: 66.00 },<br></code>
+                    <code>&nbsp;&Tab;{ name: 'Tennis Shorts', price: 59.00 },<br></code>
+                    <code>&nbsp;&Tab;{ name: 'Tennis Balls', price: 9.00 }<br></code>
+                    <code>];</code><br>
+                </p>
+                <div class="ans">
+                    <button onclick="sortArray3();">Submit</button>
+                    <button class="reset" onclick="clearResult([], 'id_result12', [])">Reset</button>
+                </div>
+                <div class="result" id="id_result12">Result: </div>
+            </div>
+        </div>
 
     </details>
 
-    <details open><summary><h2>to do</h2></summary>
-        
-
-        
-    
-            <hr>
-            <hr>
-        <div class="exercise">
-            <h3>Celsius to Fahrenheit</h3>
-            <div class="QandA">
-                <p class="ques">Prompt the user for a number in degrees Celsius, and convert the value to degrees in Fahrenheit and display it to the user.</p>
-                <div class="ans">
-                        <label for="id_tempCel">Enter a temperature in Celsius: </label><input type="number" min="-1000" max="1000" name="tempCel" id="id_tempCel"><br>
-                        <button onclick="celToF();">Submit</button>
-                        <!-- <input type="submit" value="Submit" onclick="celToF();">
-                        <input type="reset" value="Reset" onclick="clearResult(['id_tempCel'],'id_result6', [])"> -->
-                        <button class="reset" onclick="clearResult(['id_tempCel'], 'id_result6', [])">Reset</button>
-                    </div>
-                    <div class="result" id="id_result6">Result: </div>
-            </div>
-        </div>
-        <div class="exercise">
-                <h3>Tip Calculator</h3>
-                <div class="QandA">
-                    <p class="ques" style="text-align: left">Prompt the user for:</p>
-                    <ol style="text-align: left">
-                    <li>The total bill amount</li>
-                    <li>Number of people splitting the bill</li>
-                    <li>The level of service: good, fair, or bad</li>
-                    </ol>
-                    <p class="ques" style="text-align: left">Calculate the tip amount (20% for good, 15% for fair, 10% for bad service), the total amount (bill amount + tip amount), and the bill amount per person.</p>
-                    <!-- <ul style="text-align: left">
-                        <li>good -> 20%</li>
-                        <li>fair -> 15%</li>
-                        <li>bad -> 10%</li>
-                    </ul> -->
-                    <div class="ans">
-                            <label for="id_billAmt">Enter the bill amount: </label>$<input type="text" name="billAmt" id="id_billAmt"><br>
-                            <label for="id_billSplit">How many people? </label><input type="number" min="1" max="20" name="billSplit" id="id_billSplit"><br>
-                            <fieldset>
-                                <legend>How was the service?</legend>
-
-                                <input type="radio" name="svc" id="id_good" value="good" checked/>
-                                <label for="id_good">Good</label>
-                                <input type="radio" name="svc" id="id_fair" value="fair"/>
-                                <label for="id_fair">Fair</label>
-                                <input type="radio" name="svc" id="id_bad" value="bad"/>
-                                <label for="id_bad">Bad</label>
-                            </fieldset>
-
-                            <button onclick="tipCalc();">Submit</button>
-                            <!-- <input type="submit" value="Submit" onclick="tipCalc();">
-                            <input type="reset" value="Reset" onclick="clearResult(['id_billAmt1', 'id_svcLvl'],'id_result7')">
-                            <input type="reset" value="Reset" onclick="clearResult(['id_billAmt1'],'id_result7', ['id_good', 'id_fair', 'id_bad'])"> -->
-                            <button class="reset" onclick="clearResult(['id_billAmt', 'id_billSplit'],'id_result7', ['id_good', 'id_fair', 'id_bad'])">Reset</button>
-                    </div>
-                    <div class="result" id="id_result7">Result: </div>
-                </div>
-            </div>
-    <!-- </section> --></details>
 </body>
+</html>
