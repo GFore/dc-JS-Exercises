@@ -11,9 +11,8 @@
 <body>
     <header></head><h1>Javascript Exercises</h1></header>
     <script src="scripts/index.js"></script>
-    <details><summary><h2>Week 4</h2></summary>
-        <div class="exercise">
-            <h3>Positive Numbers</h3>
+    <details open><summary><h2>Week 4</h2></summary>
+        <div class="exercise"><h3>Positive Numbers</h3>
             <div class="QandA">
                 <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing only the positive numbers in the given array.</p>
                 <div class="ans">
@@ -26,8 +25,7 @@
             </div>
         </div>
 
-        <div class="exercise">
-            <h3>Even Numbers</h3>
+        <div class="exercise"><h3>Even Numbers</h3>
             <div class="QandA">
                 <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing only the even numbers in the given array.</p>
                 <div class="ans">
@@ -40,8 +38,7 @@
             </div>
         </div>
 
-        <div class="exercise">
-            <h3>Square the Numbers</h3>
+        <div class="exercise"><h3>Square the Numbers</h3>
             <div class="QandA">
                 <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing result of squaring each of the numbers in the given array by two. </p>
                 <div class="ans">
@@ -54,13 +51,12 @@
             </div>
         </div>
 
-        <div class="exercise">
-            <h3>Cities 1</h3>
+        <div class="exercise"><h3>Cities 1</h3>
             <div class="QandA">
                 <p class="ques">Write a function which takes an array of city objects (keys: name and temp) as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.</p>
                 <div class="ans">
                         <label for="id_cities1">Replace the example data below with your list of city names and temperatures:<br></label>
-                        <textarea id="id_cities1" rows="6" cols="30">City Name 1, 60.0&NewLine;City Name 2, 81.1&NewLine;City Name 3, 52.0</textarea><br>
+                        <textarea id="id_cities1" rows="6" cols="25">City Name 1, 60.0&NewLine;City Name 2, 81.1&NewLine;City Name 3, 52.0</textarea><br>
 
                         <button onclick="cities1(document.getElementById('id_cities1').value);">Submit</button>
                         <button class="reset" onclick="clearResult(['id_cities1'], 'id_result4', [])">Reset</button>
@@ -69,18 +65,31 @@
             </div>
         </div>
 
-        <div class="exercise">
-            <h3>Cities 2</h3>
+        <div class="exercise"><h3>Cities 2</h3>
             <div class="QandA">
                 <p class="ques">Write a function which takes an array of city objects like the above problem as input and returns an array of the cities names.</p>
                 <div class="ans">
                         <label for="id_cities2">Replace the example data below with your list of city names and temperatures:<br></label>
-                        <textarea id="id_cities2" rows="6" cols="30">City Name 1, 60.0&NewLine;City Name 2, 81.1&NewLine;City Name 3, 52.0</textarea><br>
+                        <textarea id="id_cities2" rows="6" cols="25">City Name 1, 60.0&NewLine;City Name 2, 81.1&NewLine;City Name 3, 52.0</textarea><br>
 
                         <button onclick="cities2(document.getElementById('id_cities2').value);">Submit</button>
                         <button class="reset" onclick="clearResult(['id_cities2'], 'id_result5', [])">Reset</button>
                     </div>
                     <div class="result" id="id_result5">Result: </div>
+            </div>
+        </div>
+
+        <div class="exercise"><h3>Good Job!</h3>
+            <div class="QandA">
+                <p class="ques">Given an array of people's names, print out 'Good Job, {{name}}!' for each person's name, one on a line.</p>
+                <div class="ans">
+                        <label for="id_names">Replace the example data below with your list of names:<br></label>
+                        <textarea id="id_names" rows="4" cols="25">Dom, Lyn, Kirk, Autumn, Trista, Jesslyn, Kevin, John, Eli, Juan, Robert, Keyur, Jason, Che, Ben</textarea><br>
+
+                        <button onclick="goodJob(document.getElementById('id_names').value);">Submit</button>
+                        <button class="reset" onclick="clearResult(['id_names'], 'id_result6', [])">Reset</button>
+                    </div>
+                    <div class="result" id="id_result6">Result: </div>
             </div>
         </div>
 

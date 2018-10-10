@@ -100,6 +100,13 @@ function cities2(cityTempList) {
     document.getElementById("id_result5").innerHTML += ` <span class="res">${citiesArray.join(', ')}</span>`
 }
 
+function goodJob(nameList) {
+    let nameArray = nameList.split(", ");    // Convert textarea string into array of strings
+
+    nameArray.forEach(x => 
+    document.getElementById("id_result6").innerHTML += ` <span class="res">Good job, ${x}!</span><br>`)
+}
+
 
 function clearResult(inputName, resultName, radioButtonList) {
     inputName.forEach(element => {document.getElementById(element).value = "";});
@@ -117,13 +124,6 @@ function clearResult(inputName, resultName, radioButtonList) {
 }
 
 
-function exHelloYouCaps() {
-    document.getElementById("id_result2").innerHTML = `Result: <span class="res">HELLO, ${document.getElementById("id_name2").value.toUpperCase()}!</span>`
-}
-
-function madlib() {
-    document.getElementById("id_result3").innerHTML = `Result: <span class="res">${document.getElementById("id_name3").value}\'s favorite subject in school is ${document.getElementById("id_subj").value}.</span>`
-}
 
 function tipCalc() {
     let totBillAmt = Number(document.getElementById("id_billAmt").value);
