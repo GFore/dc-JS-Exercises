@@ -11,7 +11,7 @@
 <body>
     <header></head><h1>Javascript Exercises</h1></header>
     <script src="scripts/index.js"></script>
-    <details open><summary><h2>Week 4</h2></summary>
+    <details><summary><h2>Week 4</h2></summary>
         <div class="exercise">
             <h3>Positive Numbers</h3>
             <div class="QandA">
@@ -41,53 +41,59 @@
         </div>
 
         <div class="exercise">
-                <h3>Square the Numbers</h3>
-                <div class="QandA">
-                    <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing result of squaring each of the numbers in the given array by two. </p>
-                    <div class="ans">
-                            <label for="id_nums3">Enter a space-separated list of ints:<br></label>
-                            <input type="text" name="nums3" id="id_nums3" class="nums"><br>
-                            <button onclick="squareNums(document.getElementById('id_nums3').value);">Submit</button>
-                            <button class="reset" onclick="clearResult(['id_nums3'], 'id_result3', [])">Reset</button>
-                        </div>
-                        <div class="result" id="id_result3">Result: </div>
-                </div>
-            </div>
-
-        <hr>
-        <hr>
-
-    </details>
-
-    <details><summary><h2>Python 103</h2></summary>
-        <div class="exercise">
-            <h3>Day of the Week</h3>
+            <h3>Square the Numbers</h3>
             <div class="QandA">
-                <p class="ques">Prompt the user for a day number (0 - 6), then convert it to the day name.</p>
+                <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing result of squaring each of the numbers in the given array by two. </p>
                 <div class="ans">
-                    <label for="id_dayNum">Enter day number (0 - 6): </label><input id="id_dayNum" type="number" name="dayNum" min="0" max="6">
-                    <!-- <input type="submit" value="Submit" onclick="dayOfWeek()"> -->
-                    <button onclick="dayOfWeek();">Submit</button>
-                    <!-- <input type="reset" value="Reset" onclick="clearResult(['id_dayNum'], 'id_result4', [])"> -->
-                    <button class="reset" onclick="clearResult(['id_dayNum'], 'id_result4', [])">Reset</button>
+                        <label for="id_nums3">Enter a space-separated list of ints:<br></label>
+                        <input type="text" name="nums3" id="id_nums3" class="nums"><br>
+                        <button onclick="squareNums(document.getElementById('id_nums3').value);">Submit</button>
+                        <button class="reset" onclick="clearResult(['id_nums3'], 'id_result3', [])">Reset</button>
+                    </div>
+                    <div class="result" id="id_result3">Result: </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h3>Cities 1</h3>
+            <div class="QandA">
+                <p class="ques">Write a function which takes an array of city objects (keys: name and temp) as input and returns a new array containing the cities whose temperature is cooler than 70 degrees.</p>
+                <div class="ans">
+                        <label for="id_cities1">Replace the example data below with your list of city names and temperatures:<br></label>
+                        <textarea id="id_cities1" rows="6" cols="30">City Name 1, 60.0&NewLine;City Name 2, 81.1&NewLine;City Name 3, 52.0</textarea><br>
+
+                        <button onclick="cities1(document.getElementById('id_cities1').value);">Submit</button>
+                        <button class="reset" onclick="clearResult(['id_cities1'], 'id_result4', [])">Reset</button>
                 </div>
                 <div class="result" id="id_result4">Result: </div>
             </div>
         </div>
+
         <div class="exercise">
-            <h3>Work or Sleep In?</h3>
+            <h3>Cities 2</h3>
             <div class="QandA">
-                <p class="ques">Prompt the user for a day of the week as a number, then print "Go to work" if it's a work day or "Sleep in" if it's a weekend day.</p>
+                <p class="ques">Write a function which takes an array of city objects like the above problem as input and returns an array of the cities names.</p>
                 <div class="ans">
-                        <label for="id_dayNum2">Enter day number (0 - 6): </label><input id="id_dayNum2" type="number" name="dayNum2" min="0" max="6">
-                        <button onclick="workOrSleep();">Submit</button>
-                        <!-- <input type="submit" value="Submit" onclick="workOrSleep()"> 
-                        <input type="reset" value="Reset" onclick="clearResult(['id_dayNum2'], 'id_result5', [])"> -->
-                        <button class="reset" onclick="clearResult(['id_dayNum2'], 'id_result5', [])">Reset</button>
+                        <label for="id_cities2">Replace the example data below with your list of city names and temperatures:<br></label>
+                        <textarea id="id_cities2" rows="6" cols="30">City Name 1, 60.0&NewLine;City Name 2, 81.1&NewLine;City Name 3, 52.0</textarea><br>
+
+                        <button onclick="cities2(document.getElementById('id_cities2').value);">Submit</button>
+                        <button class="reset" onclick="clearResult(['id_cities2'], 'id_result5', [])">Reset</button>
                     </div>
                     <div class="result" id="id_result5">Result: </div>
             </div>
         </div>
+
+
+    </details>
+
+    <details open><summary><h2>to do</h2></summary>
+        
+
+        
+    
+            <hr>
+            <hr>
         <div class="exercise">
             <h3>Celsius to Fahrenheit</h3>
             <div class="QandA">

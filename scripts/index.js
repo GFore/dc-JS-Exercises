@@ -66,6 +66,41 @@ function squareNums(numList) {
     }
 }
 
+function citiesTextareaToArray(inputString) {
+    // function to take the string entered into the City Name and Temperature textarea 
+    // and return it as an array where each item in the array is one row from the textarea
+    // and each row is converted to an object with name and temp key-value pairs
+
+    let x = inputString.split("\n").map(function (i) {return i.split(", ")});
+
+    // x is now a 2-dim array. Need to convert each child array to an object with name and temp keys
+    return x.map(function (val){
+        return {
+            name: val[0],
+            temp: Number(val[1])
+        }
+    });
+}
+
+function cities1(cityTempList) {
+    let cityArray = citiesTextareaToArray(cityTempList);    // Convert textarea string into array of city objects
+
+    const coolCities = cityArray.filter(city => city['temp'] < 70.0);   //filter out the cities that are 70 degrees or hotter
+
+    const coolCitiesArray = coolCities.map(x => x['name']);             //create array of just the city names
+
+    document.getElementById("id_result4").innerHTML += ` <span class="res">${coolCitiesArray.join(', ')}</span>`
+}
+
+function cities2(cityTempList) {
+    let cityArray = citiesTextareaToArray(cityTempList);    // Convert textarea string into array of city objects
+
+    const citiesArray = cityArray.map(x => x['name']);             //create array of just the city names
+
+    document.getElementById("id_result5").innerHTML += ` <span class="res">${citiesArray.join(', ')}</span>`
+}
+
+
 function clearResult(inputName, resultName, radioButtonList) {
     inputName.forEach(element => {document.getElementById(element).value = "";});
     // radioButtonList.forEach(element => {document.getElementById(element).removeAttribute("checked")});
