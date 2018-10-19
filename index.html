@@ -11,7 +11,7 @@
 <body>
     <header></head><h1>Javascript Exercises</h1></header>
     <script src="scripts/index.js"></script>
-    <details open><summary><h2>Week 4</h2></summary>
+    <details><summary><h2>Week 4</h2></summary>
         <div class="exercise"><h3>Positive Numbers</h3>
             <div class="QandA">
                 <p class="ques">Write a function which takes an array of numbers as input and returns a new array containing only the positive numbers in the given array.</p>
@@ -184,6 +184,23 @@
         </div>
 
     </details>
+    <div class="exercise"><h3>FizzBuzz</h3>
+        <div class="QandA">
+            <p class="ques" style="text-align: left">Solve the FizzBuzz algo with JS:<br>Print the numbers from
+                <input type="number" name="startnum" id="id_startnum" min="-100" max="100" data-numstart> to <input type="number" name="endnum" id="id_endnum" min="10" max="1000" data-numend>, replacing:</p>
+            <ul style="text-align: left">
+                <li>numbers divisible by 3 with 'fizz'</li>
+                <li>numbers divisible by 5 with 'buzz'</li>
+                <li>numbers divisible by 3 and 5 with 'fizzbuzz'</li>
+            </ul>
+            </p>
+            <div class="ans">
+                <button onclick="fizzbuzz();">Submit</button>
+                <button class="reset" onclick="clearResult(['id_startnum', 'id_endnum'], 'id_result13', [])">Reset</button>
+            </div>
+            <div class="result" id="id_result13">Result: </div>
+        </div>
+    </div>
 
 </body>
 </html>

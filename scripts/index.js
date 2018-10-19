@@ -170,6 +170,29 @@ function sortArray3() {
     });
 }
 
+function fizzbuzz() {
+    let word = `<span class="res">`;
+    let numstart = parseInt(document.querySelector('[data-numstart]').value);
+    let numend = parseInt(document.querySelector('[data-numend]').value);
+
+    if (numstart > numend) {
+        const temp = numstart;
+        numstart = numend;
+        numend = temp;
+    };
+
+    for (let i = numstart; i <= numend; i++) {
+        if (i % 15 === 0) {word += `<strong style="color: blue">fizzbuzz</strong>`;}
+        else if (i % 5 === 0) {word += `<i style="color: green">buzz</i>`;}
+        else if (i % 3 === 0) {word += `<i style="color: purple">fizz</i>`;}
+        else {word += `${i}`;};
+
+        if (i < numend) {word += ', ';};
+    };
+    document.getElementById("id_result13").innerHTML += `${word}</span>`;
+
+}
+
 function clearResult(inputName, resultName, radioButtonList) {
     inputName.forEach(element => {document.getElementById(element).value = "";});
     // radioButtonList.forEach(element => {document.getElementById(element).removeAttribute("checked")});
